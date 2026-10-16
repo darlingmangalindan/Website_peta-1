@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | GTech Hub</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="login-page">
+
+    <section class="login-card">
+        <div class="logo">
+            <span class="logo-mark">G</span>
+             Tech Hub
+        </div>
+
+        <h1>Welcome </h1>
+        <p class="subtext">Log in to explore Gaming technology. </p>
+
+        <form id="loginForm">
+            <label for="username">Username</label>
+            <input
+                id="username"
+                name="username"
+                type="text"
+                placeholder="Enter your username"
+                required
+            >
+
+            <label for="password">Password</label>
+            <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Enter your password"
+                required
+            >
+
+            <button type="submit">Log In</button>
+        </form>
+
+        <p id="message" class="notice"></p>
+
+        <p class="login-links">
+            New here? <a href="Join.html">Join us</a>
+        </p>
+    </section>
+
+    <script>
+        document.getElementById("loginForm").addEventListener(
+            "submit",
+            function(event) {
+                event.preventDefault();
+
+                const username = document
+                    .getElementById("username")
+                    .value.trim();
+
+                if (!username) {
+                    return;
+                }
+
+                sessionStorage.setItem("gthUsername", username);
+                window.location.href = "Home.html";
+            }
+        );
+    </script>
+
+</body>
+</html>

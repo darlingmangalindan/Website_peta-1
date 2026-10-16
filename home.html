@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Gaming Technology Hub</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="topbar">
+            <div class="logo">
+                <span class="logo-mark">G</span>
+                Tech Hub
+            </div>
+
+            <nav>
+                <a class="active" href="/home/login.html">Home</a>
+                <a href="/home/game.html">Games</a>
+                <a href="/home/about.html">About</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Explore the World of Gaming Technology</h1>
+
+                <p>
+                    Learn about gaming devices, computer parts,
+                    new technology, and the tools behind your
+                    favorite game.
+                </p>
+                <a class="button" href="Game.html">
+                    Explore Games
+                </a>
+            </div>
+        </section>
+
+        <h2 class="section-title"></h2>What You Can Explore</h2>
+        
+        <section class="cards">
+            <article class="card">
+                <img
+                    src="/images (10).jpeg"
+                    alt="Gaming computer setup">                
+                <div class="card-content">
+                    <h3>Gaming Setup</h3>
+                    <p>
+                        Discover monitors, keyboards, mice,
+                        and other useful gaming equipment.
+                    </p>
+                    <a href="About.html">Learn more</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <img
+                    src="/photo-1542751371-adc38448a05e.jpeg"
+                    alt="Gaming event"
+                >
+
+                <div class="card-content">
+                    <h3>Games and Esports</h3>
+                    <p>
+                        Read about popular game types and how
+                        technology helps games run.
+                    </p>
+                    <a href="Game.html">View games</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <img
+                    src="/photo-1587202372775-e229f172b9d7.jpeg"
+                    alt="Computer hardware">
+               
+                <div class="card-content">
+                    <h3>Computer Parts</h3>
+                    <p>
+                        Get to know the basic hardware used
+                        in a gaming computer.
+                    </p>
+                    <a href="Save.html">View topics</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 Gaming Technology Hub | Made for learning and gaming fans
+    </footer>
+
+    <script>
+        if (!sessionStorage.getItem("gthUsername")) {
+            window.location.replace("Login.html");
+        }
+
+        document.getElementById("logout").addEventListener(
+            "click",
+            function(event) {
+                event.preventDefault();
+
+                sessionStorage.removeItem("gthUsername");
+                window.location.href = "Login.html";
+            }
+        );
+    </script>
+
+</body>
+</html>
